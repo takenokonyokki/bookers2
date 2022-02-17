@@ -1,7 +1,16 @@
 <h1>Editing Book</h1>
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>errors prohibited this obj from being saved:
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_with model:@book, local:true do |f| %>
-  <label for="inputName">Name</label>
-  <%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"名前" %>
+  <label for="inputTitle">Title</label>
+  <%= f.text_field :title, autofocus: true, placeholder:"タイトル" %>
   <label for="inputImage">Opinion</label>
   <%= f.text_area :body, placeholder:"感想" %>
   <%= f.submit "Update Book" %>
