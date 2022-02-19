@@ -1,10 +1,27 @@
-<h1>welcome to <strong>Bookers</strong> !!</h1>
+<div class="mx-auto my-5" style="width: 500px; height: 300px;">
+      <h1>welcome to
+      <strong>
+        <i class="fa-solid fa-book"></i>
+        Bookers
+      </strong>
+        !!
+      </h1>
+      <p>
+        In
+        <i class="fa-solid fa-book"></i>
+        <strong>Bookers,</strong>
+      </p>
+      <P>you can share and exchange your opinions,inpressions,and emotions</p>
+      <p>about various books!</p>
 
-<p>In Bookers,</p>
-<P>you can share and exchange your opinions,inpressions,and emotions</p>
-<p>about various books!</p>
-
-<!--sign in(log in)は会員がする-->
-<%= link_to "Log in", new_user_session_path %>
-<!--sign upは新規登録のこと-->
-<%= link_to "Sign up", new_user_registration_path %>
+      <p>
+        <button type="button" class="btn btn-primary w-100 lg-4">
+          <%= link_to "Log in", new_user_session_path, class: "text-light" %>
+        </button>
+      </p>
+      <p>
+        <button type="button" class="btn btn-success w-100 lg-4">
+          <%= link_to "Sign up", new_user_registration_path, class: "text-light" %>
+        </button>
+      </p>
+</div>
